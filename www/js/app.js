@@ -30,9 +30,14 @@ var app = angular.module('starter', ['ionic'])
       templateUrl: 'templates/home.html',
       controller: 'HomeController'
     })
-    .state('login', {
-      url: '/login',
-      templateUrl: 'templates/login.html',
+    .state('signup', {
+      url: '/signup',
+      templateUrl: 'templates/signup.html',
+      controller: 'LoginController'
+    })
+    .state('signin', {
+      url: '/signin',
+      templateUrl: 'templates/signin.html',
       controller: 'LoginController'
     })
     .state('users', {
@@ -50,7 +55,7 @@ var app = angular.module('starter', ['ionic'])
       templateUrl: "templates/group.html",
       controller: "GroupController"
     });
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/signup');
 });
 
 // controllers
