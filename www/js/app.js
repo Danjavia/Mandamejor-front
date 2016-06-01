@@ -3,7 +3,8 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+
+var app = angular.module('starter', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,3 +23,53 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+    .state('home', {
+      url: '/',
+      templateUrl: 'templates/home.html',
+      controller: 'HomeController'
+    })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginController'
+    })
+    .state('users', {
+      url: '/users',
+      templateUrl: 'templates/users.html',
+      controller: 'UserController'
+    })
+    .state('user', {
+      url: "/users/:userId",
+      templateUrl: "templates/user.html",
+      controller: "UserController"
+    })
+    .state('group', {
+      url: "/group",
+      templateUrl: "templates/group.html",
+      controller: "GroupController"
+    });
+  $urlRouterProvider.otherwise('/login');
+});
+
+// controllers
+app.controller("UserController", function($scope, $stateParams) {
+
+  // $stateParams.userId;
+
+});
+
+app.controller("LoginController", function($scope, $stateParams) {
+
+  // $stateParams.userId;
+
+});
+
+app.controller("GroupController", function($scope, $stateParams) {
+
+  // $stateParams.userId;
+
+});
+
+

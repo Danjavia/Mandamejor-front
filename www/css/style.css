@@ -1,1 +1,31 @@
 /* Empty. Add your own CSS if you like */
+
+.scroll {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  border: none;
+  border-bottom: 1px solid #dddddd;
+}
+
+.flexbox {
+  width: 80%;
+}
+
+.title {
+  text-align: center;
+  color: #bbbbbb;
+}
+
+.button.sign-up-submit {
+  margin: 50px auto;
+}
+
+
+.signup-view {
+  background: #fefefe;
+}
