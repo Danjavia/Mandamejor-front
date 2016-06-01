@@ -74,6 +74,9 @@ app.controller("LoginController", function($scope, $stateParams) {
 app.controller("GroupController", function($scope, $stateParams) {
 
   // $stateParams.userId;
+  $scope.goBack = function () {
+    window.history.back();
+  };
 
 });
 
