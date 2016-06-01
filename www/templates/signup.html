@@ -8,25 +8,25 @@
         <div class="list sign-up">
           <h1 class="title">Mandamejor</h1>
           <label class="item item-input item-floating-label">
-            <span class="input-label">Username</span>
+            <span class="input-label" ng-model="signup.username">Username</span>
             <input type="text" placeholder="Username">
           </label>
           <label class="item item-input item-floating-label">
-            <span class="input-label">Email</span>
+            <span class="input-label" ng-model="signup.email">Email</span>
             <input type="email" placeholder="Email">
           </label>
           <label class="item item-input item-floating-label">
             <span class="input-label">Password</span>
-            <input type="password" placeholder="Password">
+            <input type="password" ng-model="signup.password" placeholder="Password">
           </label>
           <div class="row">
             <div class="col col-offset-10 col-80 text-center">
-              <a ui-sref="group" class="button button-outline button-positive sign-up-submit">
+              <a class="button button-outline button-positive sign-up-submit" ng-click="createUser()">
                 Sign up
               </a>
-              <a ui-sref="signin" class="button button-outline button-balanced sign-up-submit">
+              <button type="submit" ui-sref="signin" class="button button-outline button-balanced sign-up-submit">
                 Sign in
-              </a>
+              </button>
             </div>
           </div>
         </div>

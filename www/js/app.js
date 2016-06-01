@@ -69,6 +69,11 @@ app.controller("LoginController", function($scope, $stateParams) {
 
   // $stateParams.userId;
 
+  $scope.createUser = function () {
+    debugger;
+    console.log( $scope.username )
+  }
+
 });
 
 app.controller("GroupController", function($scope, $stateParams) {
@@ -102,7 +107,7 @@ app.controller("GroupController", function($scope, $stateParams) {
     var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
 
     // Update the time display
-    document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+    document.getElementById("clock").innerHTML = currentTimeString;
   }
 
   updateClock();
