@@ -45,7 +45,13 @@
   align-items: center;
   flex-direction: column;
   flex: 3;
-  background: #f5f5f5;
+  background: #404040;
+  color: #ffffff;
+}
+
+.group-notification h1,
+.group-notification h3 {
+  color: #ffffff;
 }
 
 .group-users {
@@ -53,9 +59,19 @@
   align-content: center;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   flex: 2;
-  background: #d0d7e6;
+  flex-wrap: wrap;
+  background: #5e5e5e;
+}
+
+.group-users .user{
+  background: url( 'http://loremflickr.com/60/60' );
+  border: 2px solid white;
+  flex: 1;
+  padding: 27px;
+  margin: 10px;
+  border-radius: 50%;
+  height: 62px;
 }
 
 .group-actions {
@@ -65,6 +81,6 @@
   align-items: center;
   flex-direction: column;
   flex: 1;
-  background: #253287;
+  background: #404040;
 }
 
